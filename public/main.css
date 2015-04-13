@@ -1,0 +1,237 @@
+
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto,Arial,sans-serif;
+    overflow-x: hidden;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: #313131;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    -webkit-transition: height 500ms ease;
+    transition: height 500ms ease;
+}
+
+header h1 {
+    font-weight: 400;
+    margin: 0;
+    color: #fff;
+    font-size: 150%;
+}
+
+header.reading {
+    height: 54px;
+}
+
+header.reading h1 {
+    font-size: 110%;
+}
+
+header.reading .drawer {
+    display: none;
+}
+
+header .drawer {
+    color: #fff;
+    height: auto;
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+header .drawer button {
+    width: auto;
+    display: block;
+    font-family: Roboto,Arial,sans-serif;
+    padding: .8rem 2.4rem;
+    font-size: 100%;
+    color: #fff;
+    background: 0 0;
+    margin: 0 auto;
+    margin-top:1em;
+    font-weight: 300;
+    border: 1px solid #fff;
+}
+
+header .drawer button:hover {
+    background-color: #80bd01;
+}
+
+header .drawer input {
+  padding: 0.5em 1em;
+  font-size: 100%;
+  width: auto;
+  outline:none;
+  display: block;
+  border:none;
+  margin: 0 auto;
+  font-family: Roboto,Arial,sans-serif;
+}
+
+.messages {
+    z-index: 10;
+    width: 100vw;
+    max-width: 450px;
+    margin: 0 auto;
+    padding-top: 58px;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 62px;
+    overflow: auto;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.messages .message {
+    display: -webkit-box !important;
+    display: -webkit-flex !important;
+    display: -moz-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    overflow: hidden;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -moz-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    padding: 5px 20px;
+}
+
+.messages .message.time {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 2px 0;
+}
+
+.messages .message.time em,.messages .message.time strong,.messages .message.time time {
+    font-size: 80%;
+    color: #8e8e8e;
+}
+
+.messages .message.time strong {
+    padding-top: 4px;
+    font-weight: 400;
+    color: #333;
+}
+
+.messages .message.time em {
+    font-size: 90%;
+    font-style: italic;
+    display: block;
+    margin: 5px 20px;
+}
+
+.messages .message.me {
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -moz-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.messages .message.me p {
+    background-color: #c5de69;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    opacity:0.3;
+  }
+  50% {
+    opacity:1;
+  }
+  100% {
+    opacity:0.3;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity:0.3;
+  }
+  50% {
+    opacity:1;
+  }
+  100% {
+    opacity:0.3;
+  }
+}
+
+.messages .message.typing {
+  -webkit-animation: pulse 1s ease-in-out infinite;
+  animation: pulse 1s ease-in-out infinite;
+}
+
+.messages .message p {
+    background-color: #e5e5ea;
+    padding: .6rem .8rem;
+    max-width: 65%;
+    border-radius: 5px;
+    margin: 0;
+    display: block;
+    overflow:hidden;
+}
+
+.messages .message img {
+    max-width: 100%;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.inputMessage {
+  width: 100%;
+  height: 52px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  outline: none;
+  font-size:100%;
+  padding: 0 2em;
+  border: none;
+  border-top:1px solid #aaa;
+  box-shadow: -2px 0 6px rgba(0,0,0,.3);
+}
